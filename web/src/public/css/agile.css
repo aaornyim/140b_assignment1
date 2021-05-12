@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+    background-color: lightblue;
+}
+p, ol li, ul li {
+  font-size: calc(0.8rem + 1vw);
+}
+/* -- ELEMENTS -- */
+
+.hero h1 {
+  font-size: calc(1rem + 5vw);
+  background: none;
+  margin: 0px;
+}
+.hero p {
+   
+    margin: 0px 1.5rem;
+    color: #ccc;
+}
+h1 {
+  font-size: calc(1rem + 3.5vw);
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  padding: var(--padding-lg) var(--padding-xl);
+  margin: var(--margin-lg) auto;
+}
+
