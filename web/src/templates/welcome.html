@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Users</title>
+</head>
+
+<body>
+    <h1>Welcome page</h1>
+
+    <br>
+    <form class='command' id='form'>
+        <label for="first_name">firstName: </label>
+        <input type="text" name="first_name" id="first_name">
+        <label for="last_name">lastName: </label>
+        <input type="text" name="last_name" id="last_name">
+        <label for="email">email: </label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Submit" onclick="msg()">
+
+    </form>
+    <br>
+    <textarea rows="4" cols="50" name="comment" form="form"></textarea>
+    <br>
+    <button onclick="pageRedirect1()">Home</button>
+    <script>
+        function pageRedirect1() {
+            window.location.href = "http://165.232.143.129"
+
+        }
+        function msg() {
+            alert("Thank you for visiting");
+        }
+    </script>
+
+  
+    <table class='margin-top-xl'>
+        <thead>
+            <tr>
+                <th class='small'> First Name </th>
+                <th class='medium'> Last Name </th>
+                <th class='large'> Email </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td> {{user[0]}} </td>
+                <td> {{user[1]}} </td>
+                <td> {{user[2]}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

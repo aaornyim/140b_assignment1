@@ -24,5 +24,20 @@ services:
       - ./db:/var/lib/mysql # persistent DB when container is stopped
     container_name: agile-db
 
+  mysql-db:
+     image: mysql:latest
+     restart: always
+     env_file:
+       ./credentials.env
+     ports:
+       - 3305:3305
+     command: --init-file /init-db.sql
+     volumes:
+       - ./web/src/Database/init-db.sql:/init-db.sql
+       - ./database/persistent_db:/var/lib/mysql
+     container_name: hw2-db
+
+
+
 volumes:
   database:

@@ -1,24 +1,40 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Page Info -->
-    <title>Agile Demo</title>
-    <meta name="author" content="Ramsin Khoshabeh">
+    <title>Aaron Yim's website</title>
+    <meta name="author" content="Aaron Yim">
     <meta name="description" content="A Place to Call Home">
 
     <link rel="stylesheet" type="text/css" href="css/agile.css">
-  </head>
+</head>
 
-  <body>
-      <h1> welcome to Aaron Yim's website </h1>
-      <p>
-          
-          Under construction Please come back later.
-      </p>
-  </body>
+<body>
+    <h1>Aaron Yim's Website</h1>
+    <p>
+        Please click welcome button to submit your info or see the guest list
+    </p>
+    <button onclick="pageRedirect()">Welcome</button>
+    <p>
+        Please click cv button
+    </p>
+    <button onclick="pageRedirect1()">CV</button>
+    <script>
+        function pageRedirect() {
+            window.location.href = "http://165.232.143.129/welcome"
+
+        }
+        function pageRedirect1() {
+            window.location.href = "http://165.232.143.129/cv"
+
+        }
+
+    </script>
+
+</body>
 </html>
